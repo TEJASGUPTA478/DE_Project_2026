@@ -1,0 +1,11 @@
+{
+  "team_number": "T0009",
+  "group_lead": { "name": "Tejas Gupta", "enrollment_no": "2501010478", "github": "TEJASGUPTA478" },
+  "members": [
+    { "name": "Priyank Gurnani", "enrollment_no": "2501010355", "github": "gurnanipriyank5" },
+    { "name": "Parth Saklani", "enrollment_no": "2501010597", "github": "legen-waitingforit-dary" },
+    { "name": "Parth Kumawat", "enrollment_no": "2501010324", "github": "parth-k17" }
+  ],
+  "postgres_version": "15 or newer",
+  "laptop_used_for_benchmarks": ""
+}
