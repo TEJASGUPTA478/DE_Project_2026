@@ -1,0 +1,31 @@
+query_id,type,avg_ms,median_ms,min_ms,max_ms,scan_nodes
+R01,READ,28.130,27.700,21.354,35.337,Seq Scan on transactions | Seq Scan on vpas
+R02,READ,0.050,0.053,0.041,0.057,Index Scan using vpas_pkey on vpas | Index Scan using users_pkey on users
+R03,READ,14.468,13.914,13.447,16.043,Seq Scan on transactions | Seq Scan on vpas
+R04,READ,7.833,7.834,7.648,8.017,Seq Scan on transactions
+R05,READ,7.186,7.292,6.865,7.401,Seq Scan on transactions
+R06,READ,6.964,6.893,6.757,7.242,Seq Scan on transactions | Index Scan using merchants_pkey on merchants
+R07,READ,7.202,7.272,6.990,7.344,Seq Scan on transactions | Index Scan using vpas_pkey on vpas | Index Scan using bank_accounts_pkey on bank_accounts
+R08,READ,348.546,348.475,345.424,351.740,Seq Scan on transactions
+R09,READ,856.481,857.090,850.276,862.078,Seq Scan on transactions
+R10,READ,1.932,1.944,1.824,2.027,Seq Scan on rewards
+R11,READ,1.954,1.975,1.885,2.001,Seq Scan on rewards
+R12,READ,2.410,2.532,1.808,2.890,Seq Scan on bill_payments
+R13,READ,29.039,26.188,24.169,36.761,Seq Scan on merchants | Seq Scan on transactions
+R14,READ,18.374,18.045,17.713,19.363,Seq Scan on transactions | Seq Scan on vpas | Index Scan using merchants_pkey on merchants
+R15,READ,9.158,9.152,9.038,9.283,Seq Scan on transactions | Seq Scan on merchants
+R16,READ,0.331,0.331,0.326,0.337,Seq Scan on disputes | Index Scan using transactions_pkey on transactions
+R17,READ,13.150,12.882,12.571,13.998,Seq Scan on transactions
+R18,READ,24.625,24.556,24.496,24.822,Seq Scan on transactions | Seq Scan on vpas | Seq Scan on users
+R19,READ,4465.677,4482.683,4416.962,4497.387,Seq Scan on merchants | Seq Scan on transactions
+R20,READ,10.043,10.086,9.837,10.206,Seq Scan on transactions
+R21,READ,0.905,0.908,0.883,0.924,Seq Scan on merchants
+R22,READ,1.961,1.910,1.882,2.091,Seq Scan on bank_accounts | Index Scan using vpas_account_id_key on vpas
+R23,READ,64.095,61.538,61.417,69.329,Seq Scan on transactions
+R24,READ,0.043,0.042,0.038,0.049,Index Scan using transactions_upi_ref_key on transactions
+R25,READ,24.056,24.543,22.441,25.184,Seq Scan on transactions | Seq Scan on vpas | Seq Scan on bank_accounts
+W01,WRITE,0.633,0.568,0.522,0.808,(no scan)
+W02,WRITE,20.565,20.164,19.906,21.624,Index Scan using transactions_pkey on transactions
+W03,WRITE,1.732,1.689,1.606,1.901,Seq Scan on rewards | Index Scan using rewards_pkey on rewards
+W04,WRITE,2.256,2.225,2.182,2.361,Seq Scan on rewards
+W05,WRITE,2.372,2.525,2.042,2.550,Seq Scan on bill_payments
