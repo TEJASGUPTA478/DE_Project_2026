@@ -1,0 +1,11 @@
+=== R16 run 1 ===
+Plan: Seq Scan on disputes | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 1.911 ms
+
+=== R16 run 2 ===
+Plan: Seq Scan on disputes | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 1.82 ms
+
+=== R16 run 3 ===
+Plan: Seq Scan on disputes | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 1.819 ms

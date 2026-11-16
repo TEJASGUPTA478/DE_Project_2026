@@ -1,0 +1,11 @@
+=== R12 run 1 ===
+Plan: Index Scan using idx_bills_user_due_date on bill_payments on 5,009,000 transactions dataset
+Execution Time: 0.043 ms
+
+=== R12 run 2 ===
+Plan: Index Scan using idx_bills_user_due_date on bill_payments on 5,009,000 transactions dataset
+Execution Time: 0.04 ms
+
+=== R12 run 3 ===
+Plan: Index Scan using idx_bills_user_due_date on bill_payments on 5,009,000 transactions dataset
+Execution Time: 0.04 ms

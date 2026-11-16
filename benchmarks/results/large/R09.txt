@@ -1,0 +1,11 @@
+=== R09 run 1 ===
+Plan: Index Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 1836.55 ms
+
+=== R09 run 2 ===
+Plan: Index Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 1815.0 ms
+
+=== R09 run 3 ===
+Plan: Index Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 1809.95 ms

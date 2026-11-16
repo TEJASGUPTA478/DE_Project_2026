@@ -1,0 +1,11 @@
+=== R03 run 1 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.119 ms
+
+=== R03 run 2 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.11 ms
+
+=== R03 run 3 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.107 ms

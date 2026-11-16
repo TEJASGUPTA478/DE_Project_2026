@@ -1,0 +1,11 @@
+=== R21 run 1 ===
+Plan: Bitmap Heap Scan on merchants | Bitmap Index Scan on idx_merchants_name_trgm on 5,009,000 transactions dataset
+Execution Time: 1.162 ms
+
+=== R21 run 2 ===
+Plan: Bitmap Heap Scan on merchants | Bitmap Index Scan on idx_merchants_name_trgm on 5,009,000 transactions dataset
+Execution Time: 1.1 ms
+
+=== R21 run 3 ===
+Plan: Bitmap Heap Scan on merchants | Bitmap Index Scan on idx_merchants_name_trgm on 5,009,000 transactions dataset
+Execution Time: 1.098 ms

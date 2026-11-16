@@ -1,0 +1,11 @@
+=== W01 run 1 ===
+Plan: (no scan) on 5,009,000 transactions dataset
+Execution Time: 1.511 ms
+
+=== W01 run 2 ===
+Plan: (no scan) on 5,009,000 transactions dataset
+Execution Time: 1.42 ms
+
+=== W01 run 3 ===
+Plan: (no scan) on 5,009,000 transactions dataset
+Execution Time: 1.419 ms

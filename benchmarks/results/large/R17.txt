@@ -1,0 +1,11 @@
+=== R17 run 1 ===
+Plan: Index Only Scan using idx_tx_p2m_merchant on transactions on 5,009,000 transactions dataset
+Execution Time: 145.13 ms
+
+=== R17 run 2 ===
+Plan: Index Only Scan using idx_tx_p2m_merchant on transactions on 5,009,000 transactions dataset
+Execution Time: 141.5 ms
+
+=== R17 run 3 ===
+Plan: Index Only Scan using idx_tx_p2m_merchant on transactions on 5,009,000 transactions dataset
+Execution Time: 141.17 ms

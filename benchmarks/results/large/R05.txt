@@ -1,0 +1,11 @@
+=== R05 run 1 ===
+Plan: Index Only Scan using idx_tx_merchant_time_success on transactions on 5,009,000 transactions dataset
+Execution Time: 0.197 ms
+
+=== R05 run 2 ===
+Plan: Index Only Scan using idx_tx_merchant_time_success on transactions on 5,009,000 transactions dataset
+Execution Time: 0.18 ms
+
+=== R05 run 3 ===
+Plan: Index Only Scan using idx_tx_merchant_time_success on transactions on 5,009,000 transactions dataset
+Execution Time: 0.178 ms

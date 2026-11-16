@@ -1,0 +1,11 @@
+=== W04 run 1 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 4.935 ms
+
+=== W04 run 2 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 4.75 ms
+
+=== W04 run 3 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 4.715 ms

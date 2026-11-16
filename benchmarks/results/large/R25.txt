@@ -1,0 +1,11 @@
+=== R25 run 1 ===
+Plan: Seq Scan on bank_accounts | Index Scan using idx_tx_completed_payer_time on transactions | Seq Scan on vpas on 5,009,000 transactions dataset
+Execution Time: 252.43 ms
+
+=== R25 run 2 ===
+Plan: Seq Scan on bank_accounts | Index Scan using idx_tx_completed_payer_time on transactions | Seq Scan on vpas on 5,009,000 transactions dataset
+Execution Time: 247.5 ms
+
+=== R25 run 3 ===
+Plan: Seq Scan on bank_accounts | Index Scan using idx_tx_completed_payer_time on transactions | Seq Scan on vpas on 5,009,000 transactions dataset
+Execution Time: 246.47 ms

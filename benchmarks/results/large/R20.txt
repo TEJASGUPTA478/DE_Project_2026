@@ -1,0 +1,11 @@
+=== R20 run 1 ===
+Plan: Index Only Scan using idx_tx_initiated_desc on transactions on 5,009,000 transactions dataset
+Execution Time: 43.46 ms
+
+=== R20 run 2 ===
+Plan: Index Only Scan using idx_tx_initiated_desc on transactions on 5,009,000 transactions dataset
+Execution Time: 42.1 ms
+
+=== R20 run 3 ===
+Plan: Index Only Scan using idx_tx_initiated_desc on transactions on 5,009,000 transactions dataset
+Execution Time: 41.94 ms

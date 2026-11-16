@@ -1,0 +1,11 @@
+=== R13 run 1 ===
+Plan: Seq Scan on merchants | Index Only Scan using idx_tx_merchant_id on transactions on 5,009,000 transactions dataset
+Execution Time: 13.215 ms
+
+=== R13 run 2 ===
+Plan: Seq Scan on merchants | Index Only Scan using idx_tx_merchant_id on transactions on 5,009,000 transactions dataset
+Execution Time: 12.7 ms
+
+=== R13 run 3 ===
+Plan: Seq Scan on merchants | Index Only Scan using idx_tx_merchant_id on transactions on 5,009,000 transactions dataset
+Execution Time: 12.635 ms

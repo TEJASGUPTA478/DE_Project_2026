@@ -1,0 +1,11 @@
+=== R19 run 1 ===
+Plan: Seq Scan on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 186.77 ms
+
+=== R19 run 2 ===
+Plan: Seq Scan on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 183.5 ms
+
+=== R19 run 3 ===
+Plan: Seq Scan on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 182.33 ms

@@ -1,0 +1,11 @@
+=== W03 run 1 ===
+Plan: Index Only Scan using idx_rewards_user_oldest on rewards | Index Scan using rewards_pkey on rewards on 5,009,000 transactions dataset
+Execution Time: 0.327 ms
+
+=== W03 run 2 ===
+Plan: Index Only Scan using idx_rewards_user_oldest on rewards | Index Scan using rewards_pkey on rewards on 5,009,000 transactions dataset
+Execution Time: 0.31 ms
+
+=== W03 run 3 ===
+Plan: Index Only Scan using idx_rewards_user_oldest on rewards | Index Scan using rewards_pkey on rewards on 5,009,000 transactions dataset
+Execution Time: 0.308 ms

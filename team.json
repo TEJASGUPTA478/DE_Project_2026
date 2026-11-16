@@ -6,6 +6,6 @@
     { "name": "Parth Saklani", "enrollment_no": "2501010597", "github": "legen-waitingforit-dary" },
     { "name": "Parth Kumawat", "enrollment_no": "2501010324", "github": "parth-k17" }
   ],
-  "postgres_version": "15 or newer",
-  "laptop_used_for_benchmarks": ""
+  "postgres_version": "PostgreSQL 15.0",
+  "laptop_used_for_benchmarks": "Apple MacBook (Apple M4, 16 GB Unified Memory, macOS)"
 }
