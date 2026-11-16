@@ -1,0 +1,81 @@
+=== R19 run 1 ===
+Sort  (cost=3917292.79..3917293.40 rows=243 width=39) (actual time=4416.913..4416.918 rows=239.00 loops=1)
+  Sort Key: ((SubPlan 2)) DESC
+  Sort Method: quicksort  Memory: 38kB
+  Buffers: shared hit=2206499
+  ->  Seq Scan on merchants m  (cost=0.00..3917283.17 rows=243 width=39) (actual time=20.548..4416.841 rows=239.00 loops=1)
+        Filter: (is_verified AND (city_id = 1))
+        Rows Removed by Filter: 2761
+        Buffers: shared hit=2206496
+        SubPlan 1
+          ->  Aggregate  (cost=7746.99..7747.00 rows=1 width=8) (actual time=8.006..8.006 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t  (cost=0.00..7746.85 rows=55 width=8) (actual time=1.215..8.002 rows=57.54 loops=239)
+                      Filter: (merchant_id = m.merchant_id)
+                      Rows Removed by Filter: 250410
+                      Buffers: shared hit=1103224
+        SubPlan 2
+          ->  Aggregate  (cost=8373.15..8373.16 rows=1 width=8) (actual time=10.473..10.473 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t_1  (cost=0.00..8373.02 rows=51 width=0) (actual time=1.601..10.470 rows=53.62 loops=239)
+                      Filter: ((merchant_id = m.merchant_id) AND ((status)::text = 'SUCCESS'::text))
+                      Rows Removed by Filter: 250414
+                      Buffers: shared hit=1103224
+Planning:
+  Buffers: shared hit=179
+Planning Time: 0.282 ms
+Execution Time: 4416.962 ms
+=== R19 run 2 ===
+Sort  (cost=3917292.79..3917293.40 rows=243 width=39) (actual time=4482.639..4482.643 rows=239.00 loops=1)
+  Sort Key: ((SubPlan 2)) DESC
+  Sort Method: quicksort  Memory: 38kB
+  Buffers: shared hit=2206499
+  ->  Seq Scan on merchants m  (cost=0.00..3917283.17 rows=243 width=39) (actual time=20.825..4482.494 rows=239.00 loops=1)
+        Filter: (is_verified AND (city_id = 1))
+        Rows Removed by Filter: 2761
+        Buffers: shared hit=2206496
+        SubPlan 1
+          ->  Aggregate  (cost=7746.99..7747.00 rows=1 width=8) (actual time=8.136..8.136 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t  (cost=0.00..7746.85 rows=55 width=8) (actual time=1.236..8.130 rows=57.54 loops=239)
+                      Filter: (merchant_id = m.merchant_id)
+                      Rows Removed by Filter: 250410
+                      Buffers: shared hit=1103224
+        SubPlan 2
+          ->  Aggregate  (cost=8373.15..8373.16 rows=1 width=8) (actual time=10.616..10.616 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t_1  (cost=0.00..8373.02 rows=51 width=0) (actual time=1.622..10.612 rows=53.62 loops=239)
+                      Filter: ((merchant_id = m.merchant_id) AND ((status)::text = 'SUCCESS'::text))
+                      Rows Removed by Filter: 250414
+                      Buffers: shared hit=1103224
+Planning:
+  Buffers: shared hit=179
+Planning Time: 0.276 ms
+Execution Time: 4482.683 ms
+=== R19 run 3 ===
+Sort  (cost=3917292.79..3917293.40 rows=243 width=39) (actual time=4497.346..4497.351 rows=239.00 loops=1)
+  Sort Key: ((SubPlan 2)) DESC
+  Sort Method: quicksort  Memory: 38kB
+  Buffers: shared hit=2206499
+  ->  Seq Scan on merchants m  (cost=0.00..3917283.17 rows=243 width=39) (actual time=21.012..4497.226 rows=239.00 loops=1)
+        Filter: (is_verified AND (city_id = 1))
+        Rows Removed by Filter: 2761
+        Buffers: shared hit=2206496
+        SubPlan 1
+          ->  Aggregate  (cost=7746.99..7747.00 rows=1 width=8) (actual time=8.205..8.205 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t  (cost=0.00..7746.85 rows=55 width=8) (actual time=1.223..8.199 rows=57.54 loops=239)
+                      Filter: (merchant_id = m.merchant_id)
+                      Rows Removed by Filter: 250410
+                      Buffers: shared hit=1103224
+        SubPlan 2
+          ->  Aggregate  (cost=8373.15..8373.16 rows=1 width=8) (actual time=10.609..10.609 rows=1.00 loops=239)
+                Buffers: shared hit=1103224
+                ->  Seq Scan on transactions t_1  (cost=0.00..8373.02 rows=51 width=0) (actual time=1.612..10.605 rows=53.62 loops=239)
+                      Filter: ((merchant_id = m.merchant_id) AND ((status)::text = 'SUCCESS'::text))
+                      Rows Removed by Filter: 250414
+                      Buffers: shared hit=1103224
+Planning:
+  Buffers: shared hit=179
+Planning Time: 0.315 ms
+Execution Time: 4497.387 ms
