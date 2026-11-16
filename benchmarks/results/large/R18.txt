@@ -1,0 +1,11 @@
+=== R18 run 1 ===
+Plan: Seq Scan on vpas | Seq Scan on users | Index Only Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 299.14 ms
+
+=== R18 run 2 ===
+Plan: Seq Scan on vpas | Seq Scan on users | Index Only Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 294.0 ms
+
+=== R18 run 3 ===
+Plan: Seq Scan on vpas | Seq Scan on users | Index Only Scan using idx_tx_success_vpa_pair_time on transactions on 5,009,000 transactions dataset
+Execution Time: 293.06 ms

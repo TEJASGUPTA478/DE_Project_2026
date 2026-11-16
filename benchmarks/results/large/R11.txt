@@ -1,0 +1,11 @@
+=== R11 run 1 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 0.127 ms
+
+=== R11 run 2 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 0.118 ms
+
+=== R11 run 3 ===
+Plan: Index Scan using idx_rewards_expiry on rewards on 5,009,000 transactions dataset
+Execution Time: 0.115 ms

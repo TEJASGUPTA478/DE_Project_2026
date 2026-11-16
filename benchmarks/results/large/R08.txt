@@ -1,0 +1,11 @@
+=== R08 run 1 ===
+Plan: Index Only Scan using idx_tx_p2p_recipient_time on transactions on 5,009,000 transactions dataset
+Execution Time: 750.96 ms
+
+=== R08 run 2 ===
+Plan: Index Only Scan using idx_tx_p2p_recipient_time on transactions on 5,009,000 transactions dataset
+Execution Time: 742.8 ms
+
+=== R08 run 3 ===
+Plan: Index Only Scan using idx_tx_p2p_recipient_time on transactions on 5,009,000 transactions dataset
+Execution Time: 741.84 ms

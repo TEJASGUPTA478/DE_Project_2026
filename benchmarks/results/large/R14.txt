@@ -1,0 +1,11 @@
+=== R14 run 1 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions | Index Scan using merchants_pkey on merchants on 5,009,000 transactions dataset
+Execution Time: 0.259 ms
+
+=== R14 run 2 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions | Index Scan using merchants_pkey on merchants on 5,009,000 transactions dataset
+Execution Time: 0.24 ms
+
+=== R14 run 3 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Index Only Scan using idx_tx_payer_status_time on transactions | Index Scan using merchants_pkey on merchants on 5,009,000 transactions dataset
+Execution Time: 0.237 ms

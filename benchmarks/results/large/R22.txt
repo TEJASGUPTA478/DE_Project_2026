@@ -1,0 +1,11 @@
+=== R22 run 1 ===
+Plan: Index Scan using idx_bank_accounts_user on bank_accounts | Index Only Scan using idx_vpas_account on vpas on 5,009,000 transactions dataset
+Execution Time: 0.083 ms
+
+=== R22 run 2 ===
+Plan: Index Scan using idx_bank_accounts_user on bank_accounts | Index Only Scan using idx_vpas_account on vpas on 5,009,000 transactions dataset
+Execution Time: 0.076 ms
+
+=== R22 run 3 ===
+Plan: Index Scan using idx_bank_accounts_user on bank_accounts | Index Only Scan using idx_vpas_account on vpas on 5,009,000 transactions dataset
+Execution Time: 0.075 ms

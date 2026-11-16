@@ -1,0 +1,11 @@
+=== W02 run 1 ===
+Plan: Index Only Scan using idx_tx_pending_id on transactions | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 0.543 ms
+
+=== W02 run 2 ===
+Plan: Index Only Scan using idx_tx_pending_id on transactions | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 0.51 ms
+
+=== W02 run 3 ===
+Plan: Index Only Scan using idx_tx_pending_id on transactions | Index Scan using transactions_pkey on transactions on 5,009,000 transactions dataset
+Execution Time: 0.507 ms

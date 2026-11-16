@@ -1,0 +1,11 @@
+=== W05 run 1 ===
+Plan: Bitmap Heap Scan on bill_payments | Bitmap Index Scan on idx_bills_due_date on 5,009,000 transactions dataset
+Execution Time: 18.92 ms
+
+=== W05 run 2 ===
+Plan: Bitmap Heap Scan on bill_payments | Bitmap Index Scan on idx_bills_due_date on 5,009,000 transactions dataset
+Execution Time: 18.3 ms
+
+=== W05 run 3 ===
+Plan: Bitmap Heap Scan on bill_payments | Bitmap Index Scan on idx_bills_due_date on 5,009,000 transactions dataset
+Execution Time: 18.28 ms

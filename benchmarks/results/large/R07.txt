@@ -1,0 +1,11 @@
+=== R07 run 1 ===
+Plan: Index Only Scan using idx_tx_failed_time on transactions | Index Scan using vpas_pkey on vpas | Index Scan using bank_accounts_pkey on bank_accounts on 5,009,000 transactions dataset
+Execution Time: 15.675 ms
+
+=== R07 run 2 ===
+Plan: Index Only Scan using idx_tx_failed_time on transactions | Index Scan using vpas_pkey on vpas | Index Scan using bank_accounts_pkey on bank_accounts on 5,009,000 transactions dataset
+Execution Time: 15.35 ms
+
+=== R07 run 3 ===
+Plan: Index Only Scan using idx_tx_failed_time on transactions | Index Scan using vpas_pkey on vpas | Index Scan using bank_accounts_pkey on bank_accounts on 5,009,000 transactions dataset
+Execution Time: 15.175 ms

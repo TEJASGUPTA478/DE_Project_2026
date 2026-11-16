@@ -1,0 +1,11 @@
+=== R24 run 1 ===
+Plan: Index Scan using transactions_upi_ref_key on transactions on 5,009,000 transactions dataset
+Execution Time: 0.044 ms
+
+=== R24 run 2 ===
+Plan: Index Scan using transactions_upi_ref_key on transactions on 5,009,000 transactions dataset
+Execution Time: 0.041 ms
+
+=== R24 run 3 ===
+Plan: Index Scan using transactions_upi_ref_key on transactions on 5,009,000 transactions dataset
+Execution Time: 0.041 ms

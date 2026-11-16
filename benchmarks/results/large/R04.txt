@@ -1,0 +1,11 @@
+=== R04 run 1 ===
+Plan: Index Scan using idx_tx_pending_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.089 ms
+
+=== R04 run 2 ===
+Plan: Index Scan using idx_tx_pending_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.082 ms
+
+=== R04 run 3 ===
+Plan: Index Scan using idx_tx_pending_time on transactions on 5,009,000 transactions dataset
+Execution Time: 0.081 ms

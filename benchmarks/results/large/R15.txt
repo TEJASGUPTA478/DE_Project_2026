@@ -1,0 +1,11 @@
+=== R15 run 1 ===
+Plan: Index Only Scan using idx_tx_success_time on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 59.37 ms
+
+=== R15 run 2 ===
+Plan: Index Only Scan using idx_tx_success_time on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 58.1 ms
+
+=== R15 run 3 ===
+Plan: Index Only Scan using idx_tx_success_time on transactions | Seq Scan on merchants on 5,009,000 transactions dataset
+Execution Time: 57.73 ms

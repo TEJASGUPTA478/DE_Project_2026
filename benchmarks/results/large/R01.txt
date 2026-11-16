@@ -1,0 +1,11 @@
+=== R01 run 1 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Bitmap Heap Scan on transactions | Bitmap Index Scan on idx_tx_payer_status_time | Bitmap Index Scan on idx_tx_payee_time on 5,009,000 transactions dataset
+Execution Time: 0.44 ms
+
+=== R01 run 2 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Bitmap Heap Scan on transactions | Bitmap Index Scan on idx_tx_payer_status_time | Bitmap Index Scan on idx_tx_payee_time on 5,009,000 transactions dataset
+Execution Time: 0.415 ms
+
+=== R01 run 3 ===
+Plan: Index Only Scan using idx_vpas_user on vpas | Bitmap Heap Scan on transactions | Bitmap Index Scan on idx_tx_payer_status_time | Bitmap Index Scan on idx_tx_payee_time on 5,009,000 transactions dataset
+Execution Time: 0.406 ms
