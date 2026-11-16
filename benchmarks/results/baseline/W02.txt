@@ -1,0 +1,66 @@
+=== W02 run 1 ===
+Update on transactions  (cost=118.47..126.49 rows=0 width=0) (actual time=21.572..21.572 rows=0.00 loops=1)
+  Buffers: shared hit=5291 dirtied=1
+  InitPlan 2
+    ->  Result  (cost=118.04..118.05 rows=1 width=8) (actual time=21.313..21.313 rows=1.00 loops=1)
+          Buffers: shared hit=5239
+          InitPlan 1
+            ->  Limit  (cost=0.42..118.04 rows=1 width=8) (actual time=21.306..21.307 rows=1.00 loops=1)
+                  Buffers: shared hit=5239
+                  ->  Index Scan using transactions_pkey on transactions transactions_1  (cost=0.42..11762.11 rows=100 width=8) (actual time=21.306..21.306 rows=1.00 loops=1)
+                        Filter: ((status)::text = 'PENDING'::text)
+                        Rows Removed by Filter: 249875
+                        Index Searches: 1
+                        Buffers: shared hit=5239
+  ->  Index Scan using transactions_pkey on transactions  (cost=0.42..8.44 rows=1 width=72) (actual time=21.330..21.331 rows=1.00 loops=1)
+        Index Cond: (txn_id = (InitPlan 2).col1)
+        Index Searches: 1
+        Buffers: shared hit=5243
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.206 ms
+Execution Time: 21.624 ms
+=== W02 run 2 ===
+Update on transactions  (cost=118.47..126.49 rows=0 width=0) (actual time=20.110..20.110 rows=0.00 loops=1)
+  Buffers: shared hit=5295 dirtied=1
+  InitPlan 2
+    ->  Result  (cost=118.04..118.05 rows=1 width=8) (actual time=19.872..19.872 rows=1.00 loops=1)
+          Buffers: shared hit=5239
+          InitPlan 1
+            ->  Limit  (cost=0.42..118.04 rows=1 width=8) (actual time=19.868..19.868 rows=1.00 loops=1)
+                  Buffers: shared hit=5239
+                  ->  Index Scan using transactions_pkey on transactions transactions_1  (cost=0.42..11762.11 rows=100 width=8) (actual time=19.867..19.868 rows=1.00 loops=1)
+                        Filter: ((status)::text = 'PENDING'::text)
+                        Rows Removed by Filter: 249875
+                        Index Searches: 1
+                        Buffers: shared hit=5239
+  ->  Index Scan using transactions_pkey on transactions  (cost=0.42..8.44 rows=1 width=72) (actual time=19.889..19.889 rows=1.00 loops=1)
+        Index Cond: (txn_id = (InitPlan 2).col1)
+        Index Searches: 1
+        Buffers: shared hit=5245
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.259 ms
+Execution Time: 20.164 ms
+=== W02 run 3 ===
+Update on transactions  (cost=118.47..126.49 rows=0 width=0) (actual time=19.866..19.867 rows=0.00 loops=1)
+  Buffers: shared hit=5295 dirtied=1
+  InitPlan 2
+    ->  Result  (cost=118.04..118.05 rows=1 width=8) (actual time=19.634..19.635 rows=1.00 loops=1)
+          Buffers: shared hit=5239
+          InitPlan 1
+            ->  Limit  (cost=0.42..118.04 rows=1 width=8) (actual time=19.631..19.631 rows=1.00 loops=1)
+                  Buffers: shared hit=5239
+                  ->  Index Scan using transactions_pkey on transactions transactions_1  (cost=0.42..11762.11 rows=100 width=8) (actual time=19.630..19.630 rows=1.00 loops=1)
+                        Filter: ((status)::text = 'PENDING'::text)
+                        Rows Removed by Filter: 249875
+                        Index Searches: 1
+                        Buffers: shared hit=5239
+  ->  Index Scan using transactions_pkey on transactions  (cost=0.42..8.44 rows=1 width=72) (actual time=19.649..19.650 rows=1.00 loops=1)
+        Index Cond: (txn_id = (InitPlan 2).col1)
+        Index Searches: 1
+        Buffers: shared hit=5245
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.201 ms
+Execution Time: 19.906 ms

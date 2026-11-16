@@ -1,0 +1,75 @@
+=== R09 run 1 ===
+Sort  (cost=56863.93..57058.19 rows=77701 width=83) (actual time=856.282..856.294 rows=468.00 loops=1)
+  Sort Key: t.initiated_at DESC
+  Sort Method: quicksort  Memory: 72kB
+  Buffers: shared hit=4622, temp read=2339 written=2345
+  ->  Subquery Scan on t  (cost=38090.62..46831.92 rows=77701 width=83) (actual time=668.198..856.214 rows=468.00 loops=1)
+        Filter: (t.gap < '00:10:00'::interval)
+        Rows Removed by Filter: 232441
+        Buffers: shared hit=4619, temp read=2339 written=2345
+        ->  WindowAgg  (cost=38090.62..43918.14 rows=233102 width=83) (actual time=667.895..851.752 rows=232909.00 loops=1)
+              Window: w1 AS (PARTITION BY transactions.payer_vpa, transactions.payee_vpa ORDER BY transactions.initiated_at)
+              Storage: Memory  Maximum Storage: 17kB
+              Buffers: shared hit=4619, temp read=2339 written=2345
+              ->  Sort  (cost=38090.59..38673.35 rows=233102 width=67) (actual time=667.882..814.043 rows=232909.00 loops=1)
+                    Sort Key: transactions.payer_vpa, transactions.payee_vpa, transactions.initiated_at
+                    Sort Method: external merge  Disk: 18712kB
+                    Buffers: shared hit=4619, temp read=2339 written=2345
+                    ->  Seq Scan on transactions  (cost=0.00..7746.85 rows=233102 width=67) (actual time=0.009..19.329 rows=232909.00 loops=1)
+                          Filter: ((status)::text = 'SUCCESS'::text)
+                          Rows Removed by Filter: 17559
+                          Buffers: shared hit=4616
+Planning:
+  Buffers: shared hit=159
+Planning Time: 0.233 ms
+Execution Time: 857.090 ms
+=== R09 run 2 ===
+Sort  (cost=56863.93..57058.19 rows=77701 width=83) (actual time=849.575..849.585 rows=468.00 loops=1)
+  Sort Key: t.initiated_at DESC
+  Sort Method: quicksort  Memory: 72kB
+  Buffers: shared hit=4622, temp read=2339 written=2345
+  ->  Subquery Scan on t  (cost=38090.62..46831.92 rows=77701 width=83) (actual time=661.778..849.514 rows=468.00 loops=1)
+        Filter: (t.gap < '00:10:00'::interval)
+        Rows Removed by Filter: 232441
+        Buffers: shared hit=4619, temp read=2339 written=2345
+        ->  WindowAgg  (cost=38090.62..43918.14 rows=233102 width=83) (actual time=661.467..845.019 rows=232909.00 loops=1)
+              Window: w1 AS (PARTITION BY transactions.payer_vpa, transactions.payee_vpa ORDER BY transactions.initiated_at)
+              Storage: Memory  Maximum Storage: 17kB
+              Buffers: shared hit=4619, temp read=2339 written=2345
+              ->  Sort  (cost=38090.59..38673.35 rows=233102 width=67) (actual time=661.456..807.084 rows=232909.00 loops=1)
+                    Sort Key: transactions.payer_vpa, transactions.payee_vpa, transactions.initiated_at
+                    Sort Method: external merge  Disk: 18712kB
+                    Buffers: shared hit=4619, temp read=2339 written=2345
+                    ->  Seq Scan on transactions  (cost=0.00..7746.85 rows=233102 width=67) (actual time=0.008..19.316 rows=232909.00 loops=1)
+                          Filter: ((status)::text = 'SUCCESS'::text)
+                          Rows Removed by Filter: 17559
+                          Buffers: shared hit=4616
+Planning:
+  Buffers: shared hit=159
+Planning Time: 0.211 ms
+Execution Time: 850.276 ms
+=== R09 run 3 ===
+Sort  (cost=56863.93..57058.19 rows=77701 width=83) (actual time=861.333..861.344 rows=468.00 loops=1)
+  Sort Key: t.initiated_at DESC
+  Sort Method: quicksort  Memory: 72kB
+  Buffers: shared hit=4622, temp read=2339 written=2345
+  ->  Subquery Scan on t  (cost=38090.62..46831.92 rows=77701 width=83) (actual time=670.346..861.273 rows=468.00 loops=1)
+        Filter: (t.gap < '00:10:00'::interval)
+        Rows Removed by Filter: 232441
+        Buffers: shared hit=4619, temp read=2339 written=2345
+        ->  WindowAgg  (cost=38090.62..43918.14 rows=233102 width=83) (actual time=670.048..856.846 rows=232909.00 loops=1)
+              Window: w1 AS (PARTITION BY transactions.payer_vpa, transactions.payee_vpa ORDER BY transactions.initiated_at)
+              Storage: Memory  Maximum Storage: 17kB
+              Buffers: shared hit=4619, temp read=2339 written=2345
+              ->  Sort  (cost=38090.59..38673.35 rows=233102 width=67) (actual time=670.039..818.939 rows=232909.00 loops=1)
+                    Sort Key: transactions.payer_vpa, transactions.payee_vpa, transactions.initiated_at
+                    Sort Method: external merge  Disk: 18712kB
+                    Buffers: shared hit=4619, temp read=2339 written=2345
+                    ->  Seq Scan on transactions  (cost=0.00..7746.85 rows=233102 width=67) (actual time=0.009..19.153 rows=232909.00 loops=1)
+                          Filter: ((status)::text = 'SUCCESS'::text)
+                          Rows Removed by Filter: 17559
+                          Buffers: shared hit=4616
+Planning:
+  Buffers: shared hit=159
+Planning Time: 0.225 ms
+Execution Time: 862.078 ms
