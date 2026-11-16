@@ -1,0 +1,39 @@
+=== R12 run 1 ===
+Sort  (cost=1000.01..1000.01 rows=1 width=24) (actual time=1.792..1.792 rows=1.00 loops=1)
+  Sort Key: due_date
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=403
+  ->  Seq Scan on bill_payments  (cost=0.00..1000.00 rows=1 width=24) (actual time=1.393..1.786 rows=1.00 loops=1)
+        Filter: ((due_date >= '2026-07-01'::date) AND (due_date <= '2026-07-07'::date) AND (user_id = 1072) AND ((status)::text = 'DUE'::text))
+        Rows Removed by Filter: 29999
+        Buffers: shared hit=400
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.155 ms
+Execution Time: 1.808 ms
+=== R12 run 2 ===
+Sort  (cost=1000.01..1000.01 rows=1 width=24) (actual time=2.873..2.874 rows=1.00 loops=1)
+  Sort Key: due_date
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=403
+  ->  Seq Scan on bill_payments  (cost=0.00..1000.00 rows=1 width=24) (actual time=1.904..2.865 rows=1.00 loops=1)
+        Filter: ((due_date >= '2026-07-01'::date) AND (due_date <= '2026-07-07'::date) AND (user_id = 1072) AND ((status)::text = 'DUE'::text))
+        Rows Removed by Filter: 29999
+        Buffers: shared hit=400
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.133 ms
+Execution Time: 2.890 ms
+=== R12 run 3 ===
+Sort  (cost=1000.01..1000.01 rows=1 width=24) (actual time=2.495..2.495 rows=1.00 loops=1)
+  Sort Key: due_date
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=403
+  ->  Seq Scan on bill_payments  (cost=0.00..1000.00 rows=1 width=24) (actual time=1.878..2.474 rows=1.00 loops=1)
+        Filter: ((due_date >= '2026-07-01'::date) AND (due_date <= '2026-07-07'::date) AND (user_id = 1072) AND ((status)::text = 'DUE'::text))
+        Rows Removed by Filter: 29999
+        Buffers: shared hit=400
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.547 ms
+Execution Time: 2.532 ms
