@@ -302,12 +302,4 @@ SET status = 'EXPIRED'
 WHERE status = 'UNSCRATCHED'
   AND expires_at < '2026-07-04 00:00:00+05:30';
 
--- @W05
--- Nightly job: bills past their due date and still unpaid become OVERDUE
-UPDATE bill_payments
-SET status = 'OVERDUE'
-WHERE status = 'DUE'
-  AND due_date < '2026-07-05';
 
--- @END
-ROLLBACK;
