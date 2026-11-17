@@ -33,3 +33,8 @@ SET search_path TO gpay;
 -- 8. Recurring Bills: bill_payments (References users)
 \copy bill_payments FROM 'seed_data/bill_payments.csv' WITH (FORMAT csv, HEADER true)
 
+-- 9. Disputes Desk: disputes (References transactions, users)
+\copy disputes FROM 'seed_data/disputes.csv' WITH (FORMAT csv, HEADER true)
+
+-- Update PostgreSQL query planner statistics across the gpay schema
+ANALYZE;
