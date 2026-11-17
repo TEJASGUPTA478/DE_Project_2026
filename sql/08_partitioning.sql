@@ -127,4 +127,22 @@ CREATE INDEX IF NOT EXISTS idx_ptxn_merchant_time_success
     ON transactions_partitioned (merchant_id, initiated_at)
     INCLUDE (amount)
     WHERE status = 'SUCCESS';
+-- ----------------------------------------------------------------------------
+-- 4. Demonstration of Partition Pruning
+-- When a query specifies an initiated_at range matching a single month,
+-- PostgreSQL query planner prunes all unneeded partitions at plan time.
+-- 
+-- Example Verification Query:
+-- EXPLAIN (ANALYZE, BUFFERS)
+-- SELECT count(*), sum(amount)
+-- FROM transactions_partitioned
+-- WHERE initiated_at >= '2026-06-01 00:00:00+05:30'
+--   AND initiated_at < '2026-07-01 00:00:00+05:30'
+--   AND status = 'SUCCESS';
+-- 
+-- Expected Plan:
+-- -> Append
+--      -> Index Scan on transactions_y2026m06
+-- (Partitions y2025m01 .. y2026m05 are pruned, reducing scan cost by 95%+)
+-- ----------------------------------------------------------------------------
 
